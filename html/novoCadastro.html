@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CADASTRO</title>
 </head>
 <body>
+    <div id="container">
+        <div id="menu"> 
+            <nav>
+                <ul>
+                <li><a href="#">Login</a> </li>
+                <li><a href="./novoCadastro.html">Novo Cadastro</a> </li>
+                <li><a href="./faleConosco.html">Fale Conosco</a> </li>
+                <li><a href="#">Portal</a> </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="Formulario">
+            <form action="#" method="GET" onsubmit="return validaCampo()">
+                <fieldset>
+                    <legend>Cadastro</legend>
+                    <div>
+                        <label for="idTxtNome">Seu Nome</label>
+                        <input type="text" name="txtNome" id="idTxtNome" placeholder="Seu Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z].* [A-Z][a-z].*{2,100}" required>
+                    </div>
+                    <div>
+                        <label for="idTxtEmail">Seu E-mail</label>
+                        <input type="email" name="txtEmail" id="idTxtEmail" placeholder="contato@html.com" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" required>
+                    </div>
+                    <div>
+                        <label for="idTxtSenha">Sua Senha</label>
+                        <input type="text" name="txtSenha" id="idTxtSenha" placeholder="1234">
+                    </div>
+                    <div>
+                        <input type="submit" value="Cadastrar">
+                    </div>
+                    <div>
+                        <p>Já tem conta?</p> 
+                        <a href="#">Ir para Login</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
     
 </body>
 </html>
