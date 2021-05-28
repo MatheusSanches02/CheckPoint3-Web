@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/faleConosco.css" type="text/css">
+    <script src="../js/faleConosco.js" defer></script>
+    <title>Fale Conosco</title> 
+
+</head>
+<body>
+    <div id="container">
+        <div id="menu"> 
+            <nav>
+                <ul>
+                <li><a href="#">Login</a> </li>
+                <li><a href="#">Novo Cadastro</a> </li>
+                <li><a href="#">Fale Conosco</a> </li>
+                <li><a href="#">Portal</a> </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="Formulario">
+            <form action="#" method="GET">
+                <fieldset>
+                    <legend>Fale Conosco</legend>
+                    <div>
+                        <label for="">Assunto</label>
+                        <input type="text" name="txtAssunto" id="idTxtAssunto" placeholder="Assunto" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required> 
+                        
+                    </div>
+                    <div>
+                        <label for="">Nome</label>
+                        <input type="text" name="txtNome" id="idTxtNome" placeholder="Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required>
+                    </div>
+                    <div>
+                        <label for="">Seu E-mail</label>
+                        <input type="email" name="txtSeuEmail" id="idTxtSeuEmail" placeholder="contato@html.com" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" required>
+                    </div>
+                    <div>
+                        <label for="">Comentario</label>
+                        <textarea name="txtComentario" id="idTxtComentario" cols="50" rows="10" ></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <div>
+                        <p>Ainda não tem conta ?</p> 
+                        <a href="#">Cadastra-se</a> 
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
