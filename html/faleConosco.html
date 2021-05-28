@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/faleConosco.css" type="text/css">
-    <script src="../js/faleConosco.js" defer></script>
+    <script src="../js/novoCadastro.js" defer></script>
     <title>FALE CONOSCO</title> 
 
 </head>
@@ -13,34 +13,33 @@
         <div id="menu"> 
             <nav>
                 <ul>
-                <li><a href="#">Login</a> </li>
-                <li><a href="./novoCadastro.html">Novo Cadastro</a> </li>
-                <li><a href="./faleConosco.html">Fale Conosco</a> </li>
-                <li><a href="#">Portal</a> </li>
+                <li><a href="#">Login</a></li>
+                <li><a href="./novoCadastro.html">Novo Cadastro</a></li>
+                <li><a href="./faleConosco.html">Fale Conosco</a></li>
+                <li><a href="#">Portal</a></li>
                 </ul>
             </nav>
         </div>
 
         <div id="Formulario">
-            <form action="./novoCadastro.html" method="GET">
+            <form action="#" method="GET" >
                 <fieldset>
                     <legend>Fale Conosco</legend>
                     <div>
                         <label for="idTxtAssunto">Assunto</label>
-                        <input type="text" name="txtAssunto" id="idTxtAssunto" placeholder="Assunto" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required> 
-                        
+                        <input type="text" name="txtAssunto" id="idTxtAssunto" placeholder="Assunto" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[A-Z][a-z].* [A-Z][a-z].*{2,100}" required>
                     </div>
                     <div>
-                        <label for="idTxtNome">Nome</label>
-                        <input type="text" name="txtNome" id="idTxtNome" placeholder="Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required>
+                        <label for="idTxtNome">Seu Nome</label>
+                        <input type="text" name="txtNome" id="idTxtNome" placeholder="Seu Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required>
                     </div>
                     <div>
                         <label for="idTxtEmail">Seu E-mail</label>
-                        <input type="email" name="txtEmail" id="idTxtEmail" placeholder="contato@html.com" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" required>
+                        <input type="text" name="txtEmail" id="idTxtEmail" placeholder="contato@html.com" pattern="[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$" >
                     </div>
                     <div>
                         <label for="idTxtComentario">Comentario</label>
-                        <textarea name="txtComentario" id="idTxtComentario" cols="50" rows="10" ></textarea>
+                        <textarea name="txtComentario" id="idTxtComentario" cols="50" rows="10" oninvalid="setCustomValidity('Este campo deve ser preechido')" required></textarea>
                     </div>
                     <div>
                         <input type="submit" value="Enviar">
