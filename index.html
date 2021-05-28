@@ -24,13 +24,13 @@
                 <legend>Login</legend>
 
                 <div>
-                    <label for="idTxtEmail">Seu e-mail</label>
-                    <input type="email" name="txtEmail" id="idTxtEmail" placeholder="contato@htmlcsspro.com" oninvalid="setCustomValidity('Este campo deve ser preenchido')" required>
+                    <label for="idTxtUsuario">Seu usuário</label>
+                    <input type="text" name="txtUsuario" id="idTxtUsuario" placeholder="usuário" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" required>
                 </div>
 
                 <div>
                     <label for="idTxtSenha">Sua senha</label>
-                    <input type="password" name="txtSenha" id="idTxtSenha" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido com letras e numeros, maximo oito caracteres.')" pattern="[a-zA-Z0-9]{4,8}$" required>
+                    <input type="password" name="txtSenha" id="idTxtSenha" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" pattern="[0-9]{2,6}" required>
                 </div>
 
                 <div>
@@ -39,12 +39,12 @@
                 </div>
 
                 <div>
-                    <input class="btn-logar" type="submit" value="Logar">
+                    <input class="btn-logar" type="submit" value="Logar" onclick="validar()">
                 </div>
 
                 <div>
                     <p>Ainda não tem conta?</p>
-                    <input class="btn-cadastro" type="submit" value="Cadastre-se">
+                    <a href="#">Cadastrar-se</a>
                 </div>
 
             </fieldset>
