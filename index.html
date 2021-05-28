@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <script src="./js/index.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Novo Cadastro</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="#">Portal</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="form">
+        <form action="#" method="GET">
+            <fieldset>
+                <legend>Login</legend>
+
+                <div>
+                    <label for="idTxtEmail">Seu e-mail</label>
+                    <input type="email" name="txtEmail" id="idTxtEmail" placeholder="contato@htmlcsspro.com" oninvalid="setCustomValidity('Este campo deve ser preenchido')" required>
+                </div>
+
+                <div>
+                    <label for="idTxtSenha">Sua senha</label>
+                    <input type="password" name="txtSenha" id="idTxtSenha" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido com letras e numeros, maximo oito caracteres.')" pattern="[a-zA-Z0-9]{4,8}$" required>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="ckbox" id="idCkbox">
+                    <label for="idCkbox">Manter-me logado</label>
+                </div>
+
+                <div>
+                    <input class="btn-logar" type="submit" value="Logar">
+                </div>
+
+                <div>
+                    <p>Ainda não tem conta?</p>
+                    <input class="btn-cadastro" type="submit" value="Cadastre-se">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>
