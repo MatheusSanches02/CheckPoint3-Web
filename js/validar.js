@@ -1,24 +1,5 @@
+var listUser = [];
 
-var user;
-var password;
-
-/*
-
-
-function validar()
-{
-    inputUser = document.getElementById('');
-    inputPassword = document.getElementById('');
-    if(inputUser = user && inputPassword == password)
-    {
-        window.location = "faleConosco.html";
-    }
-    else
-    {
-        alert("Usuario não cadastrado!");
-    }
-}
-*/
 function validar(){
     var inputUsuario = document.getElementById("idTxtUsuarioLogin").value;
     var inputSenha = document.getElementById("idTxtSenhaLogin").value;
@@ -44,12 +25,12 @@ function validar(){
     
 }
 
-function creatUser()
+
+function createUser()
 {
-    inputUser = document.getElementById('idTxtNome');
-    inputPassword = document.getElementById('idTxtSenha');
-
-    this.user = inputUser;
-    this.password = inputPassword;
-
+    console.log("Guilherme Nunes")
+    inputUser = document.getElementById('idTxtNomeCadastro').value;
+    inputPassword = document.getElementById('idTxtSenhaCadastro').value;
+    console.log(inputUser)
+    console.log(inputPassword)
 }
