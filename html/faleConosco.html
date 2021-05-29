@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/faleConosco.css" type="text/css">
-    <script src="../js/novoCadastro.js" defer></script>
+    <link rel="stylesheet" href="../css/faleConosco.css" type="text/css"> <!-- Link CSS-->
+    <script src="../js/validar.js" defer></script> <!-- Link JavaScript-->
     <title>FALE CONOSCO</title> 
 
 </head>
@@ -12,7 +12,7 @@
     <div id="container">
         <div id="menu"> 
             <nav>
-                <ul>
+                <ul> <!-- Criação de Menu-->
                 <li><a href="../index.html">Login</a></li>
                 <li><a href="./novoCadastro.html">Novo Cadastro</a></li>
                 <li><a href="./faleConosco.html">Fale Conosco</a></li>
@@ -22,10 +22,10 @@
         </div>
 
         <div id="Formulario">
-            <form method="GET" >
+            <form method="GET" > <!-- Criação de Formulario-->
                 <fieldset>
                     <legend>Fale Conosco</legend>
-                    <div>
+                    <div><!-- Formulario Fale Conosco-->
                         <label for="idTxtAssunto">Assunto</label>
                         <input type="text" name="txtAssuntoFalar" id="idTxtAssuntoFalar" placeholder="Assunto" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[A-Z][a-z].* [A-Z][a-z].*{2,100}" required>
                     </div>
@@ -42,7 +42,7 @@
                         <textarea name="txtComentario" id="idTxtComentario" cols="50" rows="10" oninvalid="setCustomValidity('Este campo deve ser preechido')" required></textarea>
                     </div>
                     <div>
-                        <input id="btnFalar" type="button" value="Enviar">
+                        <input id="btnFalar" type="button" value="Enviar" onclick="talkUs()">
                     </div>
                     <div>
                         <p>Ainda não tem conta?</p> 
