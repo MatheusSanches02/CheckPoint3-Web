@@ -10,7 +10,7 @@
         <div id="menu"> 
             <nav>
                 <ul>
-                <li><a href="#">Login</a></li>
+                <li><a href="../index.html">Login</a></li>
                 <li><a href="./novoCadastro.html">Novo Cadastro</a></li>
                 <li><a href="./faleConosco.html">Fale Conosco</a></li>
                 <li><a href="#">Portal</a></li>
@@ -19,12 +19,12 @@
         </div>
 
         <div id="Formulario">
-            <form action="faleConosco.html" method="GET" >
+            <form method="GET" >
                 <fieldset>
                     <legend>Cadastro</legend>
                     <div>
                         <label for="idTxtNome">Seu Nome</label>
-                        <input type="text" name="txtNome" id="idTxtNome" placeholder="Seu Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required>
+                        <input type="text" name="txtNomeCadastro" id="idTxtNomeCadastro" placeholder="Seu Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required>
                     </div>
                     <div>
                         <label for="idTxtEmail">Seu E-mail</label>
@@ -32,14 +32,14 @@
                     </div>
                     <div>
                         <label for="idTxtSenha">Sua Senha</label>
-                        <input type="text" name="txtSenha" id="idTxtSenha" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido, apenas com numeros')" pattern="[0-9]{5,}" required>
+                        <input type="password" name="txtSenhaCadastro" id="idTxtSenhaCadastro" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido, apenas com numeros')" pattern="[0-9]{5,}" required>
                     </div>
                     <div>
-                        <input type="submit" value="Cadastrar">
+                        <input id="btnCadastro" type="button" value="Cadastrar">
                     </div>
                     <div>
                         <p>Já tem conta?</p> 
-                        <a href="#">Ir para Login</a>
+                        <a href="../index.html">Ir para Login</a>
                     </div>
                 </fieldset>
             </form>

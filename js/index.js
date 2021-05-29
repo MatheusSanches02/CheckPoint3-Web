@@ -1,7 +1,7 @@
 // Pagina JavaScript referente ao login
 function validar(){
-    var inputUsuario = document.getElementById("idTxtUsuario").value;
-    var inputSenha = document.getElementById("idTxtSenha").value;
+    var inputUsuario = document.getElementById("idTxtUsuarioLogin").value;
+    var inputSenha = document.getElementById("idTxtSenhaLogin").value;
     var valid = false;
 
     var usuario = ["Giovanna","Matheus","Guilherme","Danielle","Luis"];

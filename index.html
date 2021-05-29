@@ -11,9 +11,9 @@
     <div id="menu">
         <nav>
             <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Novo Cadastro</a></li>
-                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="./index.html">Login</a></li>
+                <li><a href="./html/novoCadastro.html">Novo Cadastro</a></li>
+                <li><a href="./html/faleConosco.html">Fale Conosco</a></li>
                 <li><a href="#">Portal</a></li>
             </ul>
         </nav>
@@ -25,12 +25,12 @@
 
                 <div>
                     <label for="idTxtUsuario">Seu usuário</label>
-                    <input type="text" name="txtUsuario" id="idTxtUsuario" placeholder="usuário" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" required>
+                    <input type="text" name="txtUsuarioLogin" id="idTxtUsuarioLogin" placeholder="usuário" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" required>
                 </div>
 
                 <div>
                     <label for="idTxtSenha">Sua senha</label>
-                    <input type="password" name="txtSenha" id="idTxtSenha" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" pattern="[0-9]{2,6}" required>
+                    <input type="password" name="txtSenhaLogin" id="idTxtSenhaLogin" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" pattern="[0-9]{2,6}" required>
                 </div>
 
                 <div>
@@ -44,7 +44,7 @@
 
                 <div>
                     <p>Ainda não tem conta?</p>
-                    <a href="#">Cadastrar-se</a>
+                    <a href="./html/novoCadastro.html">Cadastrar-se</a>
                 </div>
 
             </fieldset>
