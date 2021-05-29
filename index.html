@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css" type="text/css">
-    <script src="./js/index.js" defer></script>
+    <link rel="stylesheet" href="./css/index.css" type="text/css"> <!-- Link CSS-->
+    <script src="./js/validar.js" defer></script> <!-- Link JavaScript-->
     <title>Login</title>
 </head>
 <body>
     <div id="menu">
         <nav>
-            <ul>
+            <ul> <!-- Criação de Menu-->
                 <li><a href="./index.html">Login</a></li>
                 <li><a href="./html/novoCadastro.html">Novo Cadastro</a></li>
                 <li><a href="./html/faleConosco.html">Fale Conosco</a></li>
@@ -19,11 +19,11 @@
         </nav>
     </div>
     <div id="form">
-        <form method="GET">
+        <div> <!-- Criação de Formulario-->
             <fieldset>
                 <legend>Login</legend>
 
-                <div>
+                <div> <!-- Formulario Login-->
                     <label for="idTxtUsuario">Seu usuário</label>
                     <input type="text" name="txtUsuarioLogin" id="idTxtUsuarioLogin" placeholder="usuário" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" required>
                 </div>
@@ -48,7 +48,7 @@
                 </div>
 
             </fieldset>
-        </form>
+        </div>
     </div>
 
 </body>
