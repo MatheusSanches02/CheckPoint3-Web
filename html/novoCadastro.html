@@ -21,32 +21,27 @@
         </div>
 
         <div id="Formulario">
-            <form method="GET" >
-                <fieldset>
-                    <legend>Cadastro</legend>
-                    <div>
-                        <label for="idTxtNome">Seu Nome</label>
-                        <input type="text" name="txtNomeCadastro" id="idTxtNomeCadastro" placeholder="Seu Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required>
-                    </div>
-                    <div>
-                        <label for="idTxtEmail">Seu E-mail</label>
-                        <input type="text" name="txtEmail" id="idTxtEmail" placeholder="contato@html.com" pattern="[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$">
-                    </div>
-                    <div>
-                        <label for="idTxtSenha">Sua Senha</label>
-                        <input type="password" name="txtSenhaCadastro" id="idTxtSenhaCadastro" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido, apenas com numeros')" pattern="[0-9]{5,}" required>
-                    </div>
-                    <div>
-                        <button class="btnCadastro" onclick="createUser()">Cadastrar</button>
-                    </div>
-                    <div>
-                        <p>Já tem conta?</p> 
-                        <a href="../index.html">Ir para Login</a>
-                    </div>
-                </fieldset>
-            </form>
+            <p>Cadastro</p>
+            <div>
+                <label for="idTxtNome">Seu Nome</label>
+                <input type="text" name="txtNomeCadastro" id="idTxtNomeCadastro" placeholder="Seu Nome">
+            </div>
+            <div>
+                <label for="idTxtEmail">Seu E-mail</label>
+                <input type="text" name="txtEmail" id="idTxtEmail" placeholder="contato@html.com">
+            </div>
+            <div>
+                <label for="idTxtSenha">Sua Senha</label>
+                <input type="password" name="txtSenhaCadastro" id="idTxtSenhaCadastro" placeholder="1234">
+            </div>
+            <div>
+                <button class="btnCadastro" onclick="createUser()">Cadastrar</button>
+            </div>
+            <div>
+                <p>Já tem conta?</p> 
+                <a href="../index.html">Ir para Login</a>
+            </div>
         </div>
     </div>
-    
 </body>
 </html>
