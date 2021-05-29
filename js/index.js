@@ -15,12 +15,10 @@ function validar(){
 
     if(valid){
         alert("Login!!")
-        window.location = "novoCadastro.html";
-        
+        window.location= './html/novoCadastro.html';
         
     }else{
         alert("Dados não Cadastrados");
-      
         
     }
     
