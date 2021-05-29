@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/validar.js"></script>
+    <link rel="stylesheet" href="../css/novoCadastro.css">
     <title>CADASTRO</title>
 </head>
 <body>
@@ -35,7 +37,7 @@
                         <input type="password" name="txtSenhaCadastro" id="idTxtSenhaCadastro" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido, apenas com numeros')" pattern="[0-9]{5,}" required>
                     </div>
                     <div>
-                        <input id="btnCadastro" type="button" value="Cadastrar">
+                        <button class="btnCadastro" onclick="createUser()">Cadastrar</button>
                     </div>
                     <div>
                         <p>Já tem conta?</p> 
