@@ -10,6 +10,23 @@ p
     margin: 0;
 }
 
+.message-error
+{
+    color: #f23d4f;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.input-error
+{
+    border-color: #f23d4f !important;
+}
+
+.hide
+{
+    display: none;
+}
+
 .menu
 {
     display: flex;
