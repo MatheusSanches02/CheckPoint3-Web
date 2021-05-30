@@ -3,53 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css" type="text/css"> <!-- Link CSS-->
-    <script src="./js/validar.js" defer></script> <!-- Link JavaScript-->
+    
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+    
     <title>Login</title>
+    
+    <script src="./js/validar.js" defer></script> 
 </head>
 <body>
-    <div id="menu">
-        <nav>
-            <ul> <!-- Criação de Menu-->
-                <li><a href="./index.html">Login</a></li>
-                <li><a href="./html/novoCadastro.html">Novo Cadastro</a></li>
-                <li><a href="./html/faleConosco.html">Fale Conosco</a></li>
-                <li><a href="#">Portal</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div id="form">
-        <div> <!-- Criação de Formulario-->
-            <fieldset>
-                <legend>Login</legend>
 
-                <div> <!-- Formulario Login-->
-                    <label for="idTxtUsuario">Seu usuário</label>
-                    <input type="text" name="txtUsuarioLogin" id="idTxtUsuarioLogin" placeholder="usuário" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" required>
-                </div>
-
-                <div>
-                    <label for="idTxtSenha">Sua senha</label>
-                    <input type="password" name="txtSenhaLogin" id="idTxtSenhaLogin" placeholder="1234" oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" pattern="[0-9]{2,6}" required>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="ckbox" id="idCkbox">
-                    <label for="idCkbox">Manter-me logado</label>
-                </div>
-
-                <div>
-                    <input class="btn-logar" type="button" value="Logar " onclick="validar()">
-                </div>
-
-                <div>
-                    <p>Ainda não tem conta?</p>
-                    <a href="./html/novoCadastro.html">Cadastrar-se</a>
-                </div>
-
-            </fieldset>
+    <!-- Menu -->
+    <div class="menu">
+        <div class="options">
+            <a class="link-menu active" href="./index.html">Login</a>
+            <a class="link-menu" href="./html/novoCadastro.html">Novo Cadastro</a>
+            <a class="link-menu" href="./html/faleConosco.html">Fale Conosco</a>
+            <a class="link-menu" href="./html/portal.html">Portal</a>
         </div>
     </div>
+    
+    <!-- Login card -->
+    <div class="login-card">
 
+        <!-- Title -->
+        <p class="title">Login</p>
+
+        <!-- Formulario -->
+        <div class="container-form">
+
+            <!-- User -->
+            <div class="container-input">
+                <p class="label">Seu usuário</p>
+                <input 
+                    required
+                    id="idTxtUsuarioLogin"
+                    class="input-form" 
+                    placeholder="Digite seu usuário" 
+                    oninvalid="setCustomValidity('Este campo deve ser preenchido')" 
+                    pattern="[a-zA-Z]{2,20}" />
+            </div>
+
+            <!-- Senha -->
+            <div class="container-input">
+                <p class="label">Seu senha</p>
+                <input 
+                    required 
+                    type="password"
+                    id="idTxtSenhaLogin"
+                    class="input-form" 
+                    placeholder="Digite sua senha"
+                    oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" 
+                    pattern="[0-9]{2,6}" />
+            </div>
+
+            <!-- Manter logado -->
+            <div class="container-checkbox">
+                <input type="checkbox" name="Manter-me logado">
+                <p>Manter-me conectado</p>
+            </div>
+
+            <!-- Button -->
+            <div class="btn-primary" onclick="validar()">Logar</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container-footer">
+            <p>Ainda não tem conta?</p>
+            <a class="btn-white" href="./html/novoCadastro.html">cadastre-se</a>
+        </div>
+    </div>
 </body>
 </html>
