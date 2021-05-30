@@ -33,26 +33,13 @@
             <!-- User -->
             <div class="container-input">
                 <p class="label">Seu nome</p>
-                <input 
-                    required
-                    id="idTxtNomeCadastro"
-                    class="input-form" 
-                    placeholder="Digite seu usuário" 
-                    oninvalid="setCustomValidity('Este campo deve ser preenchido')" 
-                    pattern="[a-zA-Z]{2,20}" />
+                <input type="text" id="idTxtNomeCadastro" class="input-form" placeholder="Digite seu usuário" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" required />
             </div>
 
             <!-- Senha -->
             <div class="container-input">
                 <p class="label">Seu senha</p>
-                <input 
-                    required 
-                    type="password"
-                    id="idTxtSenhaCadastro"
-                    class="input-form" 
-                    placeholder="Digite sua senha"
-                    oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" 
-                    pattern="[0-9]{2,6}" />
+                <input type="password" id="idTxtSenhaCadastro" class="input-form" placeholder="Digite sua senha" oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" pattern="[0-9]{2,6}" required />
             </div>
 
             <!-- Button -->
