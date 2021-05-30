@@ -1,4 +1,12 @@
-var listUser = [
+/*
+Nome dos integrantes do grupo: 
+Danielle, Giovanna, Guilherme, Luis, Matheus Sanches
+Turma TDSG
+Toda logica foi feita em JS tirando validação de preenchimento de campos, feito em HTML
+Antes das linhas de codigo existem comantarios documentando sobre o que foi feito no projeto
+*/
+
+const listUser = [
     {
         user: "Giovanna",
         password: 87019
@@ -21,21 +29,22 @@ var listUser = [
     }
 ];
 
-// validaão de login com integrantes do grupo ja adicionados ao cadastro
-function validar(){
-    var inputUsuario = document.getElementById("idTxtUsuarioLogin").value;
-    var inputSenha = document.getElementById("idTxtSenhaLogin").value;
+// validação de login com integrantes do grupo ja adicionados ao cadastro
+function validar()
+{
+    const inputUsuario = document.getElementById("idTxtUsuarioLogin").value;
+    const inputSenha = document.getElementById("idTxtSenhaLogin").value;
     const exist = listUser.find(x => x.user == inputUsuario && x.password == inputSenha)
 
-    if(exist){
+    if(exist)
+    {
         alert("Login!!")
-        window.location= './html/novoCadastro.html';
-        
-    }else{
-        alert("Dados não Cadastrados");
-        
+        window.location= './html/portal.html';    
     }
-    
+    else
+    {
+        alert("Dados não Cadastrados");    
+    }
 }
 
 // realiza o cadastro de usuario 
@@ -48,22 +57,32 @@ function createUser()
         const exist = listUser.find(x => x.user == inputUser);
         if(exist)
         {
-            console.log('Cara ja existe um usuario com esse nome')
+            alert('Já existe um usuario com esse nome.');
         }
         else
         {
-            listUser.push({user:inputUser,password:inputPassword});
-            console.log(listUser)
+            const user = { user: inputUser, password: inputPassword };
+            listUser.push(user);
+            
+            alert(`Usuário ${user.user} foi cadastrado com sucesso.`);
+            this.showListUsers();
         }
-        
     }
 }
 
-// validação de todos os campos na pagina fale conosco
-// Assunto
-// Seu Nome
-// Seu email
-// Comentario
+function showListUsers()
+{
+    const listUserDiv = document.getElementById('list-users');
+    listUserDiv.classList.add('show-list');
+
+    for (const item of listUser)
+    {
+        const element = document.createElement("p");
+        element.append(item.user);
+        listUserDiv.appendChild(element);
+    }
+}
+
 function talkUs()
 {
     const subject = document.getElementById('idTxtAssuntoFalar').value;
@@ -71,13 +90,13 @@ function talkUs()
     const email = document.getElementById('idTxtEmail').value;
     const comments = document.getElementById('idTxtComentario').value;
 
-    if(subject == "" || firstName == "" || email == "" || comments == "")
+    if(subject == "" || firstName == "" || comments == "")
     {
-        alert('Todos os campos sao obrigatorios!')
+        alert('Todos os campos sao obrigatorios, com exceção do email!')
     }
     else
     {
-        alert('Todos os campos foram preenchidos!')
-        window.location = "../html/novoCadastro.html"
+        alert('Todos os campos obrigaórios foram preenchidos!')
+        window.location = "../html/portal.html"
     }
 }
