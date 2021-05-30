@@ -34,26 +34,34 @@
             <!-- Assunto -->
             <div class="container-input">
                 <p class="label">Assunto</p>
-                <input type="text" id="idTxtAssuntoFalar" class="input-form"  placeholder="Digite o assunto"  oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" 
-                required/>
+                <input
+                    id="idTxtAssuntoFalar" 
+                    class="input-form"  
+                    placeholder="Digite o assunto" />
+                <p id="message-error-subject" class="message-error hide">Campo obrigatório</p>
             </div>
             
             <!-- Nome -->
             <div class="container-input">
                 <p class="label">Nome</p>
-                <input type="text" id="idTxtNomeFalar" class="input-form"  placeholder="Digite seu usuário" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,20}" required />
+                <input 
+                    id="idTxtNomeFalar" 
+                    class="input-form" 
+                    placeholder="Digite seu usuário" />
+                <p id="message-error-name" class="message-error hide">Campo obrigatório</p>
             </div>
 
             <!-- Seu email -->
             <div class="container-input">
                 <p class="label">Seu E-Mail</p>
-                <input id="idTxtEmail" class="input-form" placeholder="contato@html.com"  pattern="[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$" />
+                <input id="idTxtEmail" class="input-form" placeholder="contato@html.com" />
             </div>
 
             <!-- Comentário -->
             <div class="container-input">
                 <p class="label">Comentário</p>
-                <textarea id="idTxtComentario" class="input-form input-form-textarea" oninvalid="setCustomValidity('Este campo deve ser ´preenchido')"></textarea>
+                <textarea id="idTxtComentario" class="input-form input-form-textarea"></textarea>
+                <p id="message-error-password" class="message-error hide">Campo obrigatório</p>
             </div>
 
             <!-- Button -->
