@@ -3,53 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="../css/faleConosco.css" type="text/css"> <!-- Link CSS-->
-    <script src="../js/validar.js" defer></script> <!-- Link JavaScript-->
+    
     <title>FALE CONOSCO</title> 
-
+    
+    <script src="../js/validar.js" defer></script> <!-- Link JavaScript-->
 </head>
 <body>
-    <div id="container">
-        <div id="menu"> 
-            <nav>
-                <ul> <!-- Criação de Menu-->
-                <li><a href="../index.html">Login</a></li>
-                <li><a href="./novoCadastro.html">Novo Cadastro</a></li>
-                <li><a href="./faleConosco.html">Fale Conosco</a></li>
-                <li><a href="#">Portal</a></li>
-                </ul>
-            </nav>
+
+    <!-- Menu -->
+    <div class="menu">
+        <div class="options">
+            <a class="link-menu" href="../index.html">Login</a>
+            <a class="link-menu" href="./novoCadastro.html">Novo Cadastro</a>
+            <a class="link-menu active" href="./faleConosco.html">Fale Conosco</a>
+            <a class="link-menu" href="./portal.html">Portal</a>
+        </div>
+    </div>
+    
+    <!-- Login card -->
+    <div class="login-card">
+
+        <!-- Title -->
+        <p class="title">Fale Conosco</p>
+
+        <!-- Formulario -->
+        <div class="container-form">
+
+            <!-- Assunto -->
+            <div class="container-input">
+                <p class="label">Assunto</p>
+                <input 
+                    required
+                    id="idTxtAssuntoFalar"
+                    class="input-form" 
+                    placeholder="Digite seu usuário" 
+                    oninvalid="setCustomValidity('Este campo deve ser preenchido')" 
+                    pattern="[a-zA-Z]{2,20}" />
+            </div>
+            
+            <!-- Nome -->
+            <div class="container-input">
+                <p class="label">Nome</p>
+                <input 
+                    required
+                    id="idTxtNomeFalar"
+                    class="input-form" 
+                    placeholder="Digite seu usuário" 
+                    oninvalid="setCustomValidity('Este campo deve ser preenchido')" 
+                    pattern="[a-zA-Z]{2,20}" />
+            </div>
+
+            <!-- Seu email -->
+            <div class="container-input">
+                <p class="label">Seu E-Mail</p>
+                <input  
+                    id="idTxtEmail"
+                    class="input-form" 
+                    placeholder="contato@html.com"
+                    oninvalid="setCustomValidity('Este campo deve ser preenchido com n° da matrícula.')" 
+                    pattern="[0-9]{2,6}" />
+            </div>
+
+            <!-- Comentário -->
+            <div class="container-input">
+                <p class="label">Comentário</p>
+                <textarea id="idTxtComentario" class="input-form input-form-textarea"></textarea>
+            </div>
+
+            <!-- Button -->
+            <div class="btn-primary" onclick="talkUs()">Enviar</div>
         </div>
 
-        <div id="Formulario">
-            <form method="GET" > <!-- Criação de Formulario-->
-                <fieldset>
-                    <legend>Fale Conosco</legend>
-                    <div><!-- Formulario Fale Conosco-->
-                        <label for="idTxtAssunto">Assunto</label>
-                        <input type="text" name="txtAssuntoFalar" id="idTxtAssuntoFalar" placeholder="Assunto" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[A-Z][a-z].* [A-Z][a-z].*{2,100}" required>
-                    </div>
-                    <div>
-                        <label for="idTxtNome">Seu Nome</label>
-                        <input type="text" name="txtNomeFalar" id="idTxtNomeFalar" placeholder="Seu Nome" oninvalid="setCustomValidity('Este campo deve ser preenchido')" pattern="[a-zA-Z]{2,100}" required>
-                    </div>
-                    <div>
-                        <label for="idTxtEmail">Seu E-mail</label>
-                        <input type="text" name="txtEmail" id="idTxtEmail" placeholder="contato@html.com" pattern="[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$" >
-                    </div>
-                    <div>
-                        <label for="idTxtComentario">Comentario</label>
-                        <textarea name="txtComentario" id="idTxtComentario" cols="50" rows="10" oninvalid="setCustomValidity('Este campo deve ser preechido')" required></textarea>
-                    </div>
-                    <div>
-                        <input id="btnFalar" type="button" value="Enviar" onclick="talkUs()">
-                    </div>
-                    <div>
-                        <p>Ainda não tem conta?</p> 
-                        <a href="./novoCadastro.html">Cadastre-se</a>
-                    </div>
-                </fieldset>
-            </form>
+        <!-- Footer -->
+        <div class="container-footer">
+            <p>Ainda não tem conta?</p>
+            <a class="btn-white" href="./novoCadastro.html">cadastre-se</a>
         </div>
     </div>
 </body>
